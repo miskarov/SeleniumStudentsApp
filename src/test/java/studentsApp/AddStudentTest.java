@@ -22,13 +22,13 @@ public class AddStudentTest {
         driver.get("http://151.80.70.42:3000");
         driver.findElement(By.className("mdi-content-add")).click();
         driver.findElement(By.id("icon_prefix")).clear();
-        driver.findElement(By.id("icon_prefix")).sendKeys("Pavlik");
+        driver.findElement(By.id("icon_prefix")).sendKeys("bot");
         driver.findElement(By.id("icon_telephone")).clear();
         driver.findElement(By.id("icon_telephone")).sendKeys("3000");
         driver.findElement(By.className("mdi-file-cloud")).click();
         List<WebElement> elements = driver.findElements(By.id("user-list"));
         for (WebElement el: elements) {
-           Assert.assertTrue(el.getText().contains("Pavlik"));
+           Assert.assertTrue(el.getText().contains("pavlik"));
        }
 
     }
